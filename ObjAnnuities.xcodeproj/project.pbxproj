@@ -13,6 +13,10 @@
 		E4B2510B1D27495C00411B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B251091D27495C00411B54 /* Main.storyboard */; };
 		E4B2510D1D27495C00411B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B2510C1D27495C00411B54 /* Assets.xcassets */; };
 		E4B251101D27495C00411B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B2510E1D27495C00411B54 /* LaunchScreen.storyboard */; };
+		E4B2511C1D2AB2CE00411B54 /* PECAnnuityTable.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B2511B1D2AB2CE00411B54 /* PECAnnuityTable.m */; };
+		E4B251221D2ADE8700411B54 /* PECMortalityTableReference.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B251211D2ADE8700411B54 /* PECMortalityTableReference.m */; };
+		E4B2512A1D2B4E2E00411B54 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B251291D2B4E2E00411B54 /* CustomTableViewCell.m */; };
+		E4B2512C1D2B5A1500411B54 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B2512B1D2B5A1500411B54 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		E4B2510C1D27495C00411B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4B2510F1D27495C00411B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4B251111D27495C00411B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4B2511A1D2AB2CE00411B54 /* PECAnnuityTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECAnnuityTable.h; sourceTree = "<group>"; };
+		E4B2511B1D2AB2CE00411B54 /* PECAnnuityTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECAnnuityTable.m; sourceTree = "<group>"; };
+		E4B251201D2ADE8600411B54 /* PECMortalityTableReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECMortalityTableReference.h; sourceTree = "<group>"; };
+		E4B251211D2ADE8700411B54 /* PECMortalityTableReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECMortalityTableReference.m; sourceTree = "<group>"; };
+		E4B251281D2B4E2E00411B54 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		E4B251291D2B4E2E00411B54 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		E4B2512B1D2B5A1500411B54 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +73,14 @@
 				E4B251041D27495C00411B54 /* AppDelegate.m */,
 				E4B251061D27495C00411B54 /* ViewController.h */,
 				E4B251071D27495C00411B54 /* ViewController.m */,
+				E4B251281D2B4E2E00411B54 /* CustomTableViewCell.h */,
+				E4B251291D2B4E2E00411B54 /* CustomTableViewCell.m */,
+				E4B2511A1D2AB2CE00411B54 /* PECAnnuityTable.h */,
+				E4B2511B1D2AB2CE00411B54 /* PECAnnuityTable.m */,
+				E4B251201D2ADE8600411B54 /* PECMortalityTableReference.h */,
+				E4B251211D2ADE8700411B54 /* PECMortalityTableReference.m */,
 				E4B251091D27495C00411B54 /* Main.storyboard */,
+				E4B2512B1D2B5A1500411B54 /* CustomTableViewCell.xib */,
 				E4B2510C1D27495C00411B54 /* Assets.xcassets */,
 				E4B2510E1D27495C00411B54 /* LaunchScreen.storyboard */,
 				E4B251111D27495C00411B54 /* Info.plist */,
@@ -139,6 +157,7 @@
 			files = (
 				E4B251101D27495C00411B54 /* LaunchScreen.storyboard in Resources */,
 				E4B2510D1D27495C00411B54 /* Assets.xcassets in Resources */,
+				E4B2512C1D2B5A1500411B54 /* CustomTableViewCell.xib in Resources */,
 				E4B2510B1D27495C00411B54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B2511C1D2AB2CE00411B54 /* PECAnnuityTable.m in Sources */,
 				E4B251081D27495C00411B54 /* ViewController.m in Sources */,
+				E4B2512A1D2B4E2E00411B54 /* CustomTableViewCell.m in Sources */,
 				E4B251051D27495C00411B54 /* AppDelegate.m in Sources */,
+				E4B251221D2ADE8700411B54 /* PECMortalityTableReference.m in Sources */,
 				E4B251021D27495C00411B54 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

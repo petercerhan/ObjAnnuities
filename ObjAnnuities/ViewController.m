@@ -7,21 +7,52 @@
 //
 
 #import "ViewController.h"
+#import "PECAnnuityTable.h"
+#import "CustomTableViewCell.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    NSArray *_contingencyArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    PECAnnuityTable *table = [[PECAnnuityTable alloc] init];
+    
+    _contingencyArray = [table lifeAnnuityImmediate];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//MARK: TableViewDataSource
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_contingencyArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"customCell"];
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomTableViewCell" owner:self options: nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    cell.ageLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    
+    //round to 6 decimals
+    double value = round([_contingencyArray[indexPath.row] doubleValue] * 1000000) / 1000000.0;
+    
+    cell.valueLabel.text = [NSString stringWithFormat:@"%f", value];
+    
+    return cell;
+}
+
+//MARK: TableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Do nothing
 }
 
 @end
